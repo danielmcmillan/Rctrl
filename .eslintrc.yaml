@@ -1,13 +1,17 @@
+---
 extends:
-  - react-native
+  - eslint:recommended
+  - plugin:import/errors
+  - plugin:import/warnings
+  - plugin:react/recommended
   - plugin:@typescript-eslint/recommended
 parser: "@typescript-eslint/parser"
 plugins:
-  - "@typescript-eslint"
+  - react-hooks
+  - react-native
   - jest
 rules:
   # JavaScript
-  no-unused-vars: warn
   object-curly-spacing:
     - warn
     - never
@@ -22,16 +26,35 @@ rules:
   '@typescript-eslint/indent':
     - warn
     - 2
-  '@typescript-eslint/no-empty-interface':
-    - off
+  '@typescript-eslint/no-empty-interface': off
   # React/React-Native
-  react-native/no-color-literals:
-    - warn
   react/jsx-filename-extension:
     - error
     - extensions:
         - ".jsx"
         - ".tsx"
+  react/jsx-curly-spacing: warn
+  react/jsx-equals-spacing: warn
+  react/jsx-tag-spacing: warn
+  react/jsx-boolean-value: warn
+  react/jsx-handler-names: warn
+  react/jsx-key: error
+  react/jsx-no-bind: warn
+  react/jsx-pascal-case: error
+  react/jsx-wrap-multilines: warn
+  react/no-did-mount-set-state: error
+  react/no-find-dom-node: error
+  react/no-string-refs: error
+  react/prefer-es6-class:
+    - warn
+    - never
+  react/prefer-stateless-function: warn
+  react-hooks/rules-of-hooks: error
+  react-hooks/exhaustive-deps: warn
+  react-native/no-inline-styles: warn
+  react-native/no-unused-styles: warn
+  react-native/split-platform-components: error
+  react-native/no-color-literals: warn
   # Jest
   jest/valid-expect: error
 env:
