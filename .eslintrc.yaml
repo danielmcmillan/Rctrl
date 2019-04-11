@@ -15,6 +15,7 @@ rules:
   object-curly-spacing:
     - warn
     - never
+  no-empty: warn
   import/extensions:
     - error
     - always
@@ -27,6 +28,7 @@ rules:
     - warn
     - 2
   '@typescript-eslint/no-empty-interface': off
+  '@typescript-eslint/no-inferrable-types': off
   # React/React-Native
   react/jsx-filename-extension:
     - error
